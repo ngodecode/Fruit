@@ -13,7 +13,7 @@ class AppLocalizations {
     'en': {
       'title': 'Fruits',
       'error_connection': 'Im sorry, Please check Your internet connection',
-      'show_quantity': 'Show Quantity',
+      'show_quantity': 'Show highest quantity',
       'total_is': '%s quantity is %s',
       'cancel': 'Cancel',
       'total': 'Total %s',
@@ -22,7 +22,7 @@ class AppLocalizations {
     'id': {
       'title': 'Daftar Buah',
       'error_connection': 'Maaf, Mohon periksa koneksi internet Anda',
-      'show_quantity': 'Tampilkan Jumlah',
+      'show_quantity': 'Tampilkan jumlah terbanyak',
       'total_is': '%s berjumlah %s',
       'cancel': 'Keluar',
       'price_format': 'Keluar',

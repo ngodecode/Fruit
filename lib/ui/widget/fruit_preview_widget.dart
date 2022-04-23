@@ -4,15 +4,11 @@ import 'package:flutter/material.dart';
 /// date: 2022-04-23
 
 class FruitPreviewWidget extends StatelessWidget {
-  final String textButton;
   final String imageUrl;
-  final Function() onButtonPressed;
 
   const FruitPreviewWidget({
     Key? key,
     required this.imageUrl,
-    required this.textButton,
-    required this.onButtonPressed,
   }) : super(key: key);
 
   @override
@@ -67,11 +63,6 @@ class FruitPreviewWidget extends StatelessWidget {
                 );
               },
             ),
-          ),
-          const SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: onButtonPressed,
-            child: Text(textButton),
           ),
           const SizedBox(height: 20),
         ],

@@ -56,7 +56,17 @@ class FruitPageState extends State<FruitPage> {
           if (state is Loading) {
             return _showLoading();
           } else if (state is FetchSuccess) {
-            return _showList(state.items);
+            return Column(
+              children: [
+                Expanded(
+                  child: _buildList(state.items),
+                ),
+                const Divider(
+                  color: Colors.grey,
+                ),
+                _buildButton(state.items),
+              ],
+            );
           } else {
             return const SizedBox();
           }
@@ -83,7 +93,19 @@ class FruitPageState extends State<FruitPage> {
     );
   }
 
-  Widget _showList(List<Fruit> items) {
+  Widget _buildButton(List<Fruit> items) {
+    return ElevatedButton(
+      child: Text(_locale.showQuantity),
+      onPressed: () async {
+        final item = items.fold<Fruit>(items[0], (value, element) {
+          return value.quantity > element.quantity ? value : element;
+        });
+        _showDialogFruit(item);
+      },
+    );
+  }
+
+  Widget _buildList(List<Fruit> items) {
     return ListView.separated(
         separatorBuilder: (context, index) {
           return const Divider(
@@ -102,10 +124,6 @@ class FruitPageState extends State<FruitPage> {
                 builder: (context) {
                   return FruitPreviewWidget(
                     imageUrl: item.image,
-                    textButton: _locale.showQuantity,
-                    onButtonPressed: () {
-                      _showDialogFruit(item);
-                    },
                   );
                 },
               );
