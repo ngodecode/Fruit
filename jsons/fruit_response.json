@@ -1,0 +1,8 @@
+{
+  "message": "SUCCESS",
+  "code": 200,
+  "data": {
+    "imagesReferences": "@map",
+    "fruits": "$[]fruit_item"
+  }
+}

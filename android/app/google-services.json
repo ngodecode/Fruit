@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "990954765030",
+    "project_id": "ta-fruit-project",
+    "storage_bucket": "ta-fruit-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990954765030:android:510c5433884257ec661927",
+        "android_client_info": {
+          "package_name": "com.ta.fruit.fruit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990954765030-31i6sah57rapfifokc9epq09f2aftqq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXWfmhtRHS9bq6DbUlSdiqAKfpmefwcM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990954765030-31i6sah57rapfifokc9epq09f2aftqq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
