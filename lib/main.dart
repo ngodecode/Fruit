@@ -1,16 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit/app/core/network_client.dart';
 import 'package:fruit/app/core/route_map.dart';
+import 'package:fruit/app/core/service_locator.dart';
 import 'package:fruit/app/locale/app_localizations_delegate.dart';
 import 'package:fruit/app/network/AppNetworkClient.dart';
 import 'package:fruit/app/route/AppRouteMap.dart';
-import 'package:fruit/app/core/service_locator.dart';
 import 'package:fruit/app/service_locator/AppServiceLocator.dart';
 import 'package:fruit/bloc/fruit_bloc.dart';
 import 'package:fruit/datasource/FruitDataSource.dart';
 import 'package:fruit/network/api/fruit_api.dart';
 import 'package:fruit/repository/FruitRepository.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: '/pdf',
       onGenerateRoute: (settings) {
         return _locator<RouteMap>().get(settings);
       },
